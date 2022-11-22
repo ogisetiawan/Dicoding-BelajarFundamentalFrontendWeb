@@ -132,3 +132,122 @@ console.log(wa1.myProfile()); //? call method from child class
 console.log(wa1.sendMessage("pesan", "ogi")); //? call class from parent class and property from will set super(author)
 console.log(wa1.showAllContacts()); //
 console.log(WhatsApp.callTest());
+
+//@ Asyncrounous
+//? task yang kecil akan selesai duluan
+console.log('Selamat datang!');//? ext 1
+ 
+setTimeout(() => { //? with settimeout we can promize other script can run early
+  console.log('Terimakasih sudah mampir, silakan datang kembali!')
+}, 3000); //? ext 3
+ 
+console.log('Ada yang bisa dibantu?'); //? ext 2
+
+
+//@ Callback
+//? prosess async untuk mendapatkan nilai setelah script async
+const orderCoffee = callback  => {
+  let coffee = null;
+  console.log("Sedang membuat kopi, silakan tunggu...");
+  //? Async
+  setTimeout(() => {
+      coffee = "Kopi sudah jadi!";
+      callback(coffee) //? if not use callback, coffe still null
+  }, 3000);
+
+  // return coffee;
+}
+
+orderCoffee(kopi => { //? param kopi is callback
+  console.log(kopi); 
+});
+
+//@ Promise
+//? prosses async
+const executorFunction = (resolve, reject) => {
+  const isCoffeeMakerReady = false;
+  if (isCoffeeMakerReady) {
+    resolve('Kopi berhasil dibuat'); //? if value true
+  } else {
+    reject('Mesin Kopi tidak bisa digunakan!');
+  }
+};
+
+//? function hanlder
+const handlerSuccess = resolvedValue => { //? handler function pada param promise
+  console.log(resolvedValue);
+}
+
+const handlerRejected = rejectionReason => {
+  console.log(rejectionReason) //? return param dari object promise
+};
+ 
+const makeCoffee = new Promise(executorFunction);
+makeCoffee.then(handlerSuccess).catch(handlerRejected); //? then and catch
+
+//@ promiseAll
+const arabicaOrder = () => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Kopi arabika selesai!');
+    }, 4000);
+  });
+};
+ 
+const robustaOrder = () => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Kopi robusta selesai!');
+    }, 2000);
+  });
+};
+ 
+const libericaOrder = () => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Kopi liberica selesai!');
+    }, 3000);
+  });
+};
+ 
+//? function handler
+const handlerSuccess = resolvedValue => { //? handler function pada param promise
+  console.log(resolvedValue);
+}
+
+const handlerRejected = rejectionReason => {
+  console.log(rejectionReason) //? return param dari object promise
+};
+ 
+
+const promises = [arabicaOrder(), robustaOrder(), libericaOrder()]; //? set into object array to call promise
+Promise.all(promises).then(handlerSuccess).catch(handlerRejected); //? call promise and handler
+
+//@ Async await
+const getCoffee = () => { //? object promise
+  return new Promise((resolve, reject) => {
+      const seeds = 11;
+      setTimeout(() => {
+          if (seeds >= 10) {
+              resolve("Kopi didapatkan!");
+          } else {
+              reject("Biji kopi habis!");
+          }
+      }, 1000);
+  })
+}
+
+async function makeCoffee() { //? tell that makecoffe as async
+  // getCoffee().then(coffee => { //? promise getCoffe()
+  //     console.log(coffee);
+  // });
+  //? call object promise async wait
+  try {
+    const coffee = await getCoffee(); //? await digunakan untuk menghentikan proses pembacaan kode selanjutnya sampai fungsi getCoffee() mengembalikan nilai promise resolve
+    console.log(coffee);
+  }catch(reject){
+    console.log(reject);
+  }
+}
+
+makeCoffee();
