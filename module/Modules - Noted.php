@@ -3,7 +3,7 @@
  * @Author: ogisetiawan21@gmail.com 
  * @Date: 2022-11-18 15:03:10 
  * @Last Modified by: ogisetiawan21@gmail.com
- * @Last Modified time: 2022-11-22 23:01:22
+ * @Last Modified time: 2022-11-26 16:09:57
  */
 //@ ECMA Script 6
 //? Browser dan Node.js adalah contoh implementasi dari ECMA-262/ECMAScript
@@ -31,4 +31,9 @@
 //? merupakan teknik penulisan untuk mengatasi proses asyncronous dengan gaya penulisan syncronous.
 //~ Module
 //? proses export import class, functin, object yg dpt digunakan di module lainya ( reusable )
-//? <script src="app.js" type="module"></script> //? mengaktifkan tag script module pada browser tertentu/terbaru  
+//? <script src="app.js" type="module"></script> //? mengaktifkan tag script module pada browser tertentu/terbaru
+
+//@ WEB COMPONENTS
+//? fitur yang ada di browser API yang bersifat reusable/modular
+//~ Custom Element
+//? global variable (object) yg diguakan untuk kustom element HTML
