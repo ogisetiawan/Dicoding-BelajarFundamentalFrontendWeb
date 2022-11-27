@@ -3,7 +3,7 @@
  * @Author: ogisetiawan21@gmail.com 
  * @Date: 2022-11-18 15:03:10 
  * @Last Modified by: ogisetiawan21@gmail.com
- * @Last Modified time: 2022-11-26 16:09:57
+ * @Last Modified time: 2022-11-27 21:24:00
  */
 //@ ECMA Script 6
 //? Browser dan Node.js adalah contoh implementasi dari ECMA-262/ECMAScript
@@ -37,3 +37,7 @@
 //? fitur yang ada di browser API yang bersifat reusable/modular
 //~ Custom Element
 //? global variable (object) yg diguakan untuk kustom element HTML
+
+//@ SHADOW DOM
+//? enkapsulasi DOM di dalam DOM.
+//? dapat memisahkan struktur, style, dan behaviour dari dokumen HTML utama sehingga Shadow DOM menjadi tersembunyi dan terpisah dari kode yang lain pada halaman tersebut.
