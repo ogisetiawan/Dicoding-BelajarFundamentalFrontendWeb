@@ -1,0 +1,22 @@
+{
+  "name": "webclock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ."
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}

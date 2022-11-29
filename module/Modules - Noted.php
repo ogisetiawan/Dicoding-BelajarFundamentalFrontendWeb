@@ -3,7 +3,7 @@
  * @Author: ogisetiawan21@gmail.com 
  * @Date: 2022-11-18 15:03:10 
  * @Last Modified by: ogisetiawan21@gmail.com
- * @Last Modified time: 2022-11-27 21:24:00
+ * @Last Modified time: 2022-11-28 22:07:54
  */
 //@ ECMA Script 6
 //? Browser dan Node.js adalah contoh implementasi dari ECMA-262/ECMAScript
@@ -41,3 +41,12 @@
 //@ SHADOW DOM
 //? enkapsulasi DOM di dalam DOM.
 //? dapat memisahkan struktur, style, dan behaviour dari dokumen HTML utama sehingga Shadow DOM menjadi tersembunyi dan terpisah dari kode yang lain pada halaman tersebut.
+
+//@ NPM
+//? dependencies ; merupakan objek yang menampung package yang kita gunakan untuk membuat aplikasi. Biasanya package yang didaftarkan pada dependencies merupakan sebuah framework seperti React, Angular, Vue, jQuery atau framework lainny
+//?? npm install <package-name>
+//? npm uninstall <package-name>
+//? devDependecies; mendaftarkan package yang digunakan hanya selama pengembangan saja. Contohnya package yang berfungsi sebagai web server lokal seperti http-server, atau package yang berfungsi untuk membundel JavaScript seperti webpack
+//? npm install <package-name> --save-dev 
+//?npm uninstall <package-name> --save-dev
+//? runner script atur di package.json tambahkan script 'start' http-server
