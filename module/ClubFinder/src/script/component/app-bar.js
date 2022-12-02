@@ -10,6 +10,7 @@ class AppBar extends HTMLElement {
   render() {
     // this.innerHTML = `<h2>Club Finder</h2>`;
     //? set style kusus untuk element app-bar
+    /// merupakan selector untuk menunjuk element host 
     this.shadowDOM.innerHTML = `
     <style>
       * {
