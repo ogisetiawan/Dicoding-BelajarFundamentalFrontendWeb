@@ -3,7 +3,7 @@
  * @Author: ogisetiawan21@gmail.com 
  * @Date: 2022-11-18 15:03:10 
  * @Last Modified by: ogisetiawan21@gmail.com
- * @Last Modified time: 2022-12-01 22:02:30
+ * @Last Modified time: 2022-12-05 17:12:25
  */
 //@ ECMA Script 6
 //? Browser dan Node.js adalah contoh implementasi dari ECMA-262/ECMAScript
@@ -52,6 +52,7 @@
 //? runner script atur di package.json tambahkan script 'start' http-server
 
 //@ WEBPACK
+//! npm install (jika sudah ada package.json akan install smua pacakge yg ada di dependencies)
 //? module bundler static dari beberapa dependecies
 //? concept; webpack will observ/define which moule we use then convert one module/or more modules
 //? dependencies graph; adalah script2(module with dependencies) yang saling terhubung satu sama lain
@@ -100,3 +101,12 @@
 //? create file in root -->  webpack.common.js, webpack.prod.js and webpack.dev.js
 //* set package.json "build": "webpack --config webpack.prod.js", and "start-dev": "webpack serve --config webpack.dev.js"
 //? dengan ini kita tdk membtuhkanan lagi webpack.config.js karena sudah diatur bberapa mode
+/// untuk memastikan build baik
+//? http-server ./dist  (run port)
+//? npm install -g http-server ( set global in node.js)
+//? npm install regenerator-runtime (clear error)
+
+//@ASYNCRONOUS JAVASCRIPT REQUEST
+//? 
+//~ Fetch
+//? membuat http request tnpa harus membuat banyak instance dan method
