@@ -3,7 +3,7 @@
  * @Author: ogisetiawan21@gmail.com 
  * @Date: 2022-11-18 15:03:10 
  * @Last Modified by: ogisetiawan21@gmail.com
- * @Last Modified time: 2022-12-05 17:12:25
+ * @Last Modified time: 2022-12-05 22:31:56
  */
 //@ ECMA Script 6
 //? Browser dan Node.js adalah contoh implementasi dari ECMA-262/ECMAScript
@@ -106,7 +106,9 @@
 //? npm install -g http-server ( set global in node.js)
 //? npm install regenerator-runtime (clear error)
 
-//@ASYNCRONOUS JAVASCRIPT REQUEST
-//? 
+//@ ASYNCRONOUS JAVASCRIPT REQUEST (AJAX)
+//~ AJAX
+//? halaman web terbarui tanpa terjadinya proses ulang memuat halaman web 
 //~ Fetch
 //? membuat http request tnpa harus membuat banyak instance dan method
+//? promise untuk mengatasi asyncronous proccess sehingga mengurasi penerapan callback. Selain itu, Fetch dapat dituliskan dengan gaya syncronous menggunakan async/await.
