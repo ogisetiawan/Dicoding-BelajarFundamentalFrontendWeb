@@ -4,10 +4,10 @@
   "description": "Submission Dicoding @ogisetiawan",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve  --config webpack.dev.js",
-    "prod": "webpack --config webpack.prod.js",
-    "tail": "npx tailwindcss -i ./src/style/style.css -o ./dist/style/style.css --watch"
+    "start": "http-server ./dist",
+    "build": "webpack --config webpack.prod.js",
+    "tail": "npx tailwindcss -i ./src/style/style.css -o ./dist/style/style.css --watch",
+    "dev": "webpack serve --config webpack.dev.js"
   },
   "author": "@ogisetiawan",
   "license": "ISC",

@@ -3,7 +3,7 @@
  * @Author: ogisetiawan21@gmail.com 
  * @Date: 2022-11-18 15:03:10 
  * @Last Modified by: ogisetiawan21@gmail.com
- * @Last Modified time: 2022-12-06 17:06:35
+ * @Last Modified time: 2022-12-27 16:00:17
  */
 //@ ECMA Script 6
 //? Browser dan Node.js adalah contoh implementasi dari ECMA-262/ECMAScript
@@ -102,7 +102,7 @@
 //* set package.json "build": "webpack --config webpack.prod.js", and "start-dev": "webpack serve --config webpack.dev.js"
 //? dengan ini kita tdk membtuhkanan lagi webpack.config.js karena sudah diatur bberapa mode
 /// untuk memastikan build baik
-//? http-server ./dist  (run port)
+//! http-server ./dist  // untuk menjalankan mode prod
 //? npm install -g http-server ( set global in node.js)
 //? npm install regenerator-runtime (clear error)
 
