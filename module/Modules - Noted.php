@@ -3,7 +3,7 @@
  * @Author: ogisetiawan21@gmail.com 
  * @Date: 2022-11-18 15:03:10 
  * @Last Modified by: ogisetiawan21@gmail.com
- * @Last Modified time: 2022-12-05 22:31:56
+ * @Last Modified time: 2022-12-06 17:06:35
  */
 //@ ECMA Script 6
 //? Browser dan Node.js adalah contoh implementasi dari ECMA-262/ECMAScript
@@ -44,10 +44,10 @@
 
 //@ NPM
 //? dependencies ; merupakan objek yang menampung package yang kita gunakan untuk membuat aplikasi. Biasanya package yang didaftarkan pada dependencies merupakan sebuah framework seperti React, Angular, Vue, jQuery atau framework lainny
-//~ npm install <package-name>
+//~ npm install <package-name> / npm init -y (save-dev)
 //! npm uninstall <package-name>
 //? devDependecies; mendaftarkan package yang digunakan hanya selama pengembangan saja. Contohnya package yang berfungsi sebagai web server lokal seperti http-server, atau package yang berfungsi untuk membundel JavaScript seperti webpack
-//~ npm install <package-name> --save-dev 
+//! npm install <package-name> --save-dev 
 //! npm uninstall <package-name> --save-dev
 //? runner script atur di package.json tambahkan script 'start' http-server
 
@@ -81,7 +81,7 @@
 //~ Babel Loader
 //? sebuah transpiler yang bertugas untuk mengubah sintaks JavaScript modern (ES6+) menjadi sintaks yang dapat didukung penuh oleh seluruh browser.
 //? dapat menuliskan sintaks JavaScript versi terbaru tanpa khawatir memikirkan dukungan pada browser
-//~ npm install @babel/core babel-loader @babel/preset-env --save-dev
+//! npm install @babel/core babel-loader @babel/preset-env --save-dev
 //~ Menggunakan Plugin
 //? Dengan menambahkan plugin HtmlWebpackPlugin, Webpack dapat membuatkan berkas HTML dan memasukkan script hasil bundel pada berkas HTML yang dibuat secara otomatis
 //? HtmlWebpackPlugin juga mendukung templating dan penggunaannya sangat dapat dikonfigurasi 
@@ -93,7 +93,7 @@
 //? fitur live-reloading jika ada perubahan tanpa harus rebuild
 //! npm install webpack-dev-server --save-dev
 //? setup package.json "start-dev": "webpack serve"
-//? npm run start-dev to running
+//! npm run start-dev to running
 //? http://localhost:{yourport}/webpack-dev-server (to see webpack are served )
 //~ Webpack Enviorenment
 //? webpack marge; menggabungkan beberapa enviorenment mode
