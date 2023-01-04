@@ -4,7 +4,7 @@ const main = () => {
 
   const getCountryCaseTotal = (options) => {
     axios.request(options)
-    .then(function (response) {
+    .then( (response) => {
       const errorMsg = document.getElementById("country-not-found").classList;
       const successMsg = document.getElementById("success").classList;
       const data = response.data["data"];
@@ -39,14 +39,14 @@ const main = () => {
       errorMsg.add('hidden');
 
       getGlobalCaseTotal();
-    }).catch(function (error) {
+    }).catch( (error) => {
       console.error(error);
     });
   };
 
   const getGlobalCaseTotal = () => {
     axios.get('https://api.covid19api.com/world/total')
-    .then(function (response) {
+    .then((response) => {
       const data = response.data;
       const confirm = document.getElementById("world-confirmed");
       const death = document.getElementById("world-death");
@@ -56,34 +56,16 @@ const main = () => {
       death.innerText = data.TotalDeaths.toLocaleString();
       recover.innerText = data.TotalRecovered.toLocaleString();
     })
-    .catch(function (error) {
+    .catch((error) => {
       console.log(error);
     })
   }
-
-  // async function getGlobalCaseTotal() {
-  //   try {
-  //     const response = await axios.get(
-  //       "https://api.covid19api.com/world/total"
-  //     );
-  //     const data = response.data;
-  //     const confirm = document.getElementById("world-confirmed");
-  //     const death = document.getElementById("world-death");
-  //     const recover = document.getElementById("world-recover");
-
-  //     confirm.innerText = data.TotalConfirmed.toLocaleString();
-  //     death.innerText = data.TotalDeaths.toLocaleString();
-  //     recover.innerText = data.TotalRecovered.toLocaleString();
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
 
   document.addEventListener("DOMContentLoaded", () => {
     const searchBtn = document.querySelector("#search-btn");
     const searchElement = document.querySelector("#search-txt");
 
-    searchBtn.addEventListener("click", function (e) {
+    searchBtn.addEventListener("click", (e) => {
       e.preventDefault();
       const country = `${searchElement.value.charAt(0).toUpperCase()}${searchElement.value.slice(1).toLowerCase()}`;
       console.log(country);
